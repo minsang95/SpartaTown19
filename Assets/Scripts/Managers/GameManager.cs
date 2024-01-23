@@ -26,6 +26,7 @@ public class GameManager : MonoBehaviour
     public Text PlayerName;
     public StringBuilder Persons = new StringBuilder();
     public string BefName;
+    public GameObject PlayerUI;
     private void Awake()
     {
         if (Instance == null)
