@@ -25,5 +25,9 @@ public class PersonCheck : MonoBehaviour
         {
             GameManager.Instance.Persons.Replace(GameManager.Instance.BefName, "");
         }
+        else if (collision.gameObject.tag == "NPC")
+        {
+            GameManager.Instance.Persons.Replace($"{collision.name}\n", "");
+        }
     }
 }
