@@ -31,7 +31,7 @@ public class StartMenu : MonoBehaviour
         {
             return;
         }
-        GameManager.Instance.SetCharacter(characterType, name);
+        GameManager.Instance.SetCharacter(characterType, inputField.text);
         
         Destroy(gameObject);
     }
