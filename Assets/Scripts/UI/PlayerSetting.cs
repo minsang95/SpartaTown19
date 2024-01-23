@@ -26,6 +26,7 @@ public class PlayerSetting : MonoBehaviour
         PlayerName.text = inputField.text;
         GameManager.Instance.Persons.Replace(GameManager.Instance.BefName, inputField.text+"\n");
         GameManager.Instance.BefName = inputField.text + "\n";
+        inputField.text = "";
         transform.Find("NameChangedUI").gameObject.SetActive(false);
     }
     public void OnClickPersonListBtn()
