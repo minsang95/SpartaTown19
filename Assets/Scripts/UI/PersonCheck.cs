@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PersonCheck : MonoBehaviour
 {
@@ -11,6 +12,10 @@ public class PersonCheck : MonoBehaviour
         {
             GameManager.Instance.Persons.Append($"{GameManager.Instance.PlayerName.text}\n");
             GameManager.Instance.BefName = $"{GameManager.Instance.PlayerName.text}\n";
+        }
+        else if(collision.gameObject.tag == "NPC")
+        {
+            GameManager.Instance.Persons.Append($"{collision.name}\n");
         }
     }
 

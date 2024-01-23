@@ -33,7 +33,6 @@ public class GameManager : MonoBehaviour
         else
             Destroy(gameObject);
     }
-
     public void SetCharacter(CharacterType characterType, string name)
     {
         var character = Instance.CharacterList.Find(item => item.Type == characterType);
@@ -41,7 +40,7 @@ public class GameManager : MonoBehaviour
         PlayerAnimator.runtimeAnimatorController = character.AnimatorController;
         PlayerName.text = name;
         BefName = name + "\n";
-        Persons.Append(BefName);
+        Persons.Replace("name\n", BefName);
     }
 
 }
