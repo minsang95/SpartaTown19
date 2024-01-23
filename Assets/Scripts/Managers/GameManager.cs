@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 public enum CharacterType
@@ -21,6 +24,8 @@ public class GameManager : MonoBehaviour
     public List<Character> CharacterList = new List<Character>();
     public Animator PlayerAnimator;
     public Text PlayerName;
+    public StringBuilder Persons = new StringBuilder();
+    public string BefName;
     private void Awake()
     {
         if (Instance == null)
@@ -36,4 +41,5 @@ public class GameManager : MonoBehaviour
         PlayerAnimator.runtimeAnimatorController = character.AnimatorController;
         PlayerName.text = name;
     }
+
 }
