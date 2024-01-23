@@ -10,6 +10,9 @@ public class PlayerSetting : MonoBehaviour
     [SerializeField] private InputField inputField;
     [SerializeField] private Text PlayerName;
     [SerializeField] private Text PersonList;
+    [SerializeField] private Animator PlayerAnimator;
+
+    private CharacterType characterType;
     public void OnClickNameChangedBtn()
     {
         transform.Find("NameChangedUI").gameObject.SetActive(true);
@@ -33,5 +36,17 @@ public class PlayerSetting : MonoBehaviour
     public void OnClickPersonListEscBtn()
     {
         transform.Find("PersonListUI").gameObject.SetActive(false);
+    }
+
+    public void OnClickCharacterChangedBtn()
+    {
+        transform.Find("CharacterChangedUI").gameObject.SetActive(true);
+    }
+    public void OnClickCharacterSet(int index )
+    {
+        characterType = (CharacterType)index;
+        var character = GameManager.Instance.CharacterList.Find(item => item.Type == characterType);
+        PlayerAnimator.runtimeAnimatorController = character.AnimatorController;
+        transform.Find("CharacterChangedUI").gameObject.SetActive(false);
     }
 }
