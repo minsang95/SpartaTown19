@@ -4126,7 +4126,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &663520973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4775,7 +4775,7 @@ MonoBehaviour:
     AnimatorController: {fileID: 9100000, guid: 2ce064be2f3b4784697b8f85fa3f6f56, type: 2}
   PlayerAnimator: {fileID: 27188128}
   PlayerName: {fileID: 1384578661}
-  PersonList: []
+  BefName: 
 --- !u!4 &1150539853
 Transform:
   m_ObjectHideFlags: 0
@@ -5436,7 +5436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Name
+  m_Text: 
 --- !u!222 &1384578662
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5617,7 +5617,7 @@ GameObject:
   - component: {fileID: 1412478432}
   - component: {fileID: 1412478431}
   m_Layer: 0
-  m_Name: PersonNameTxt
+  m_Name: PersonListTxt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12592,7 +12592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 239557136}
   PlayerName: {fileID: 1384578661}
-  PersonList: {fileID: 0}
+  PersonList: {fileID: 1412478431}
 --- !u!1 &1881787245
 GameObject:
   m_ObjectHideFlags: 0
@@ -12838,7 +12838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1961760433
 RectTransform:
   m_ObjectHideFlags: 0

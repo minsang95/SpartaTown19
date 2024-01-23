@@ -40,6 +40,8 @@ public class GameManager : MonoBehaviour
 
         PlayerAnimator.runtimeAnimatorController = character.AnimatorController;
         PlayerName.text = name;
+        BefName = name + "\n";
+        Persons.Append(BefName);
     }
 
 }
